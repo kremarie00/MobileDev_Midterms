@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'WelcomePage.dart';
+import 'Dashboard.dart';
 
 void main() {
   runApp(MyApp());
@@ -83,7 +83,7 @@ class _LoginDemoState extends State<LoginDemo> {
               child: TextButton(
                 onPressed: () {
                   Navigator.push(
-                      context, MaterialPageRoute(builder: (_) => WelcomePage()));
+                      context, MaterialPageRoute(builder: (_) => Dashboard()));
                 },
                 child: Text(
                   'Login',
