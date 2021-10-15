@@ -82,8 +82,12 @@ class _LoginDemoState extends State<LoginDemo> {
                   color: Colors.blue, borderRadius: BorderRadius.circular(20)),
               child: TextButton(
                 onPressed: () {
-                  Navigator.push(
-                      context, MaterialPageRoute(builder: (_) => Dashboard()));
+                  Navigator.of(context).pop;
+                  Navigator
+                  .of(context)
+                  .pushReplacement(
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => Dashboard()));
                 },
                 child: Text(
                   'Login',
