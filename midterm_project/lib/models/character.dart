@@ -18,7 +18,6 @@ class Character {
   });
 
   factory Character.fromJson(dynamic json) {
-    const String str = "http://api.genshin.dev/characters/";
     return Character(
       characterName: json['name'] as String,
       vision: json['vision'] as String,
