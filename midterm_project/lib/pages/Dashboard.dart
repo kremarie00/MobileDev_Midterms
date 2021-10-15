@@ -23,12 +23,10 @@ class _DashboardState extends State<Dashboard> {
 
   Future<void> getCharacters() async {
     characters = await CharacterApi.getCharacter();
-    setState(() {
+    characterDetails = await CharacterApi.getCharacterDetails(characters);
+     setState(() {
       isLoading = false;
     });
-    characterDetails = await CharacterApi.getCharacterDetails(characters);
-
-    print(characterDetails);
   }
 
   @override
