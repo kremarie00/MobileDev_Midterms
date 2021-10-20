@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:midterm_project/models/character.api.dart';
 import 'package:midterm_project/models/character.dart';
 import 'package:midterm_project/widgets/CharacterCard.dart';
+import 'package:midterm_project/widgets/NavigationDrawer.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -32,6 +33,7 @@ class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        drawer: NavigationDrawerWidget(),
         appBar: AppBar(
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -39,8 +41,11 @@ class _DashboardState extends State<Dashboard> {
               ImageIcon(
                 AssetImage("assets/intertwined_fate.png"),
               ),
-              SizedBox(width: 10),
-              Text("Genshin Impact"),
+              SizedBox(width: 5),
+              Text('Genshin Impact', 
+              style: TextStyle(
+                fontFamily: 'Roboto',
+              )),
             ],
           ),
         ),
