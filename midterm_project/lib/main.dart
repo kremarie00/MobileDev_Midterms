@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
-import 'pages/Dashboard.dart';
-import 'pages/WelcomePage.dart';
+import 'pages/LoginPage.dart';
 
 void main() {
-
-  
   runApp(MaterialApp(
-    home: Dashboard(),
+    home: LoginDemo(),
   ));
 }
-
