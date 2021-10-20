@@ -1,6 +1,7 @@
 // @dart=2.9
 import 'package:flutter/material.dart';
 import 'package:shape_of_view/shape_of_view.dart';
+import 'Dashboard.dart';
 
 void main() {
   runApp(MyApp());
@@ -137,7 +138,14 @@ class _MyHomePageState extends State<MyHomePage> {
                         height: 1.0,
                       ),
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).pop;
+                          Navigator
+                            .of(context)
+                            .pushReplacement(
+                           MaterialPageRoute(
+                            builder: (BuildContext context) => Dashboard()));
+                        },
                         child: Text(
                           'BACK TO DASHBOARD',
                           style: TextStyle(
